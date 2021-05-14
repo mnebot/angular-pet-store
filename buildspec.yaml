@@ -21,7 +21,7 @@ phases:
       # - echo building...
       - ng lint
       - ng build 
-  test:
+  post_build:
     commands:
       # - echo testing...
       - ng test
