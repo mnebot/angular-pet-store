@@ -13,6 +13,8 @@ phases:
       - aws codeartifact login --tool npm --domain marcal --domain-owner 441479161631 --repository DAP-rep 
       - npm i -g @angular/cli
       - npm install
+      - npm install -D sonarqube-scanner
+      - sonar-scanner -Dsonar.organization=mnebot -Dsonar.projectKey=mnebot_angular-pet-store -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a81ccdbfe2d719ad609e46503606ea32f06c9a48
   build:
     commands:
       - echo building...
