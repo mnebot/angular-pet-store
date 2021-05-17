@@ -20,7 +20,7 @@ phases:
     commands:
       # - echo building...
       # - ng lint
-      - ng build 
+      - ng build --prod
   post_build:
     commands:
       # - echo testing...
