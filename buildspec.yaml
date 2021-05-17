@@ -13,8 +13,8 @@ phases:
   pre_build:
     commands:
       - echo installing dependencies...
-      - aws codeartifact login --tool npm --repository DAP-rep --domain marcal --domain-owner 441479161631
       - npm i -g @angular/cli
+      - aws codeartifact login --tool npm --repository DAP-rep --domain marcal --domain-owner 441479161631
       - npm install
   build:
     commands:
