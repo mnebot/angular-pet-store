@@ -11,7 +11,6 @@ phases:
     commands:
       - echo installing dependencies...
       - aws codeartifact login --tool npm --domain marcal --domain-owner 441479161631 --repository DAP-rep 
-      #- export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain marcal --domain-owner 441479161631 --query authorizationToken --output text` 
       - npm i -g @angular/cli
       - npm install
   build:
@@ -27,4 +26,3 @@ artifacts:
     - "**/*"
   discard-paths: no
   base-directory: dist/angular-pet-store
- 
