@@ -3,13 +3,15 @@ version: 0.1
 phases:
   install:
     commands:
-      - echo installing nodejs...
+      - echo installing nodejs and aws cli ...
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt-get install -y nodejs
+      - pip3 install awscli --upgrade --user
   pre_build:
     commands:
       - echo installing dependencies...
-      - export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain marcal --domain-owner 441479161631 --query authorizationToken --output text`
+      - aws codeartifact login --tool npm --domain marcal --domain-owner 441479161631 --repository DAP-rep 
+      #- export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain marcal --domain-owner 441479161631 --query authorizationToken --output text`
       - npm i -g @angular/cli
       - npm install
   build:
