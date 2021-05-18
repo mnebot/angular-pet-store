@@ -14,7 +14,7 @@ phases:
       - npm i -g @angular/cli
       - npm install
       - npm install -D sonarqube-scanner
-      - sonar-scanner -Dsonar.organization=mnebot -Dsonar.projectKey=mnebot_angular-pet-store -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a81ccdbfe2d719ad609e46503606ea32f06c9a48
+      - sonarqube-scanner -Dsonar.organization=mnebot -Dsonar.projectKey=mnebot_angular-pet-store -Dsonar.sources=src -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a81ccdbfe2d719ad609e46503606ea32f06c9a48
   build:
     commands:
       - echo building...
